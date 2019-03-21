@@ -2,8 +2,8 @@ package runner
 
 import (
 	"bytes"
+	b64 "encoding/base64"
 	"encoding/json"
-	"strconv"
 	"text/template"
 	"time"
 
@@ -12,17 +12,17 @@ import (
 
 // call template data
 type callTemplateData struct {
-	RequestNumber      int64  // unique incrememnted request number for each request
-	RequestNumberInBytes []byte // unique incrememnted request number for each request in unicode bytes
-	FullyQualifiedName string // fully-qualified name of the method call
-	MethodName         string // shorter call method name
-	ServiceName        string // the service name
-	InputName          string // name of the input message type
-	OutputName         string // name of the output message type
-	IsClientStreaming  bool   // whether this call is client streaming
-	IsServerStreaming  bool   // whether this call is server streaming
-	Timestamp          string // timestamp of the call in RFC3339 format
-	TimestampUnix      int64  // timestamp of the call as unix time
+	RequestNumber       int64  // unique incrememnted request number for each request
+	RequestNumberBase64 string // unique incrememnted request number for each request in unicode bytes
+	FullyQualifiedName  string // fully-qualified name of the method call
+	MethodName          string // shorter call method name
+	ServiceName         string // the service name
+	InputName           string // name of the input message type
+	OutputName          string // name of the output message type
+	IsClientStreaming   bool   // whether this call is client streaming
+	IsServerStreaming   bool   // whether this call is server streaming
+	Timestamp           string // timestamp of the call in RFC3339 format
+	TimestampUnix       int64  // timestamp of the call as unix time
 }
 
 // newCallTemplateData returns new call template data
@@ -30,17 +30,17 @@ func newCallTemplateData(mtd *desc.MethodDescriptor, reqNum int64) *callTemplate
 	now := time.Now()
 
 	return &callTemplateData{
-		RequestNumber:      reqNum,
-		RequestNumberInBytes: []byte(strconv.FormatInt(reqNum, 10)),
-		FullyQualifiedName: mtd.GetFullyQualifiedName(),
-		MethodName:         mtd.GetName(),
-		ServiceName:        mtd.GetService().GetName(),
-		InputName:          mtd.GetInputType().GetName(),
-		OutputName:         mtd.GetOutputType().GetName(),
-		IsClientStreaming:  mtd.IsClientStreaming(),
-		IsServerStreaming:  mtd.IsServerStreaming(),
-		Timestamp:          now.Format(time.RFC3339),
-		TimestampUnix:      now.Unix(),
+		RequestNumber:       reqNum,
+		RequestNumberBase64: b64.StdEncoding.EncodeToString([]byte(RequestNumber)),
+		FullyQualifiedName:  mtd.GetFullyQualifiedName(),
+		MethodName:          mtd.GetName(),
+		ServiceName:         mtd.GetService().GetName(),
+		InputName:           mtd.GetInputType().GetName(),
+		OutputName:          mtd.GetOutputType().GetName(),
+		IsClientStreaming:   mtd.IsClientStreaming(),
+		IsServerStreaming:   mtd.IsServerStreaming(),
+		Timestamp:           now.Format(time.RFC3339),
+		TimestampUnix:       now.Unix(),
 	}
 }
 
