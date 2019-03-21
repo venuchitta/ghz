@@ -13,7 +13,7 @@ import (
 // call template data
 type callTemplateData struct {
 	RequestNumber      int64  // unique incrememnted request number for each request
-	RequestNumberInBytes string // unique incrememnted request number for each request in unicode bytes
+	RequestNumberInBytes []byte // unique incrememnted request number for each request in unicode bytes
 	FullyQualifiedName string // fully-qualified name of the method call
 	MethodName         string // shorter call method name
 	ServiceName        string // the service name
@@ -31,7 +31,7 @@ func newCallTemplateData(mtd *desc.MethodDescriptor, reqNum int64) *callTemplate
 
 	return &callTemplateData{
 		RequestNumber:      reqNum,
-		RequestNumberInBytes: string([]byte(strconv.FormatInt(reqNum, 10))),
+		RequestNumberInBytes: []byte(strconv.FormatInt(reqNum, 10)),
 		FullyQualifiedName: mtd.GetFullyQualifiedName(),
 		MethodName:         mtd.GetName(),
 		ServiceName:        mtd.GetService().GetName(),
