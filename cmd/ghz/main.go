@@ -11,8 +11,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/bojand/ghz/printer"
-	"github.com/bojand/ghz/runner"
+	"github.com/venuchitta/ghz/printer"
+	"github.com/venuchitta/ghz/runner"
 	"github.com/jinzhu/configor"
 )
 

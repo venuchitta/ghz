@@ -40,7 +40,7 @@ class Footer extends React.Component {
             <a href={this.docUrl('intro.html', this.props.language)}>
               Guide
             </a>
-            <a href="https://godoc.org/github.com/bojand/ghz">
+            <a href="https://godoc.org/github.com/venuchitta/ghz">
               GoDoc
             </a>
           </div>
@@ -52,12 +52,12 @@ class Footer extends React.Component {
           </div>
           <div>
             <h5>More</h5>
-            <a href="https://github.com/bojand/ghz">GitHub</a>
+            <a href="https://github.com/venuchitta/ghz">GitHub</a>
             <a
               className="github-button"
               href={this.props.config.repoUrl}
               data-icon="octicon-star"
-              data-count-href="/bojand/ghz"
+              data-count-href="/venuchitta/ghz"
               data-show-count="true"
               data-count-aria-label="# stargazers on GitHub"
               aria-label="Star this project on GitHub">

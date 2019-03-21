@@ -131,17 +131,17 @@ class Index extends React.Component {
 
     const Badges = () => (
       <div className="productShowcaseSection" style={{ textAlign: 'center' }}>
-          <a href={"https://github.com/bojand/ghz/releases/latest"}>
-            <img src={"https://img.shields.io/github/release/bojand/ghz.svg?style=flat-square"} alt={"Release"} />
+          <a href={"https://github.com/venuchitta/ghz/releases/latest"}>
+            <img src={"https://img.shields.io/github/release/venuchitta/ghz.svg?style=flat-square"} alt={"Release"} />
           </a>
-          <a href={"https://circleci.com/gh/bojand/ghz"} style={{ margin: '5px' }}>
-            <img src={"https://img.shields.io/circleci/project/github/bojand/ghz/master.svg?style=flat-square"} alt={"Build status"} />
+          <a href={"https://circleci.com/gh/venuchitta/ghz"} style={{ margin: '5px' }}>
+            <img src={"https://img.shields.io/circleci/project/github/venuchitta/ghz/master.svg?style=flat-square"} alt={"Build status"} />
           </a>
-          <a href={"https://goreportcard.com/report/github.com/bojand/ghz"}>
-            <img src={"https://goreportcard.com/badge/github.com/bojand/ghz?style=flat-square"} alt={"Go Report Card"} />
+          <a href={"https://goreportcard.com/report/github.com/venuchitta/ghz"}>
+            <img src={"https://goreportcard.com/badge/github.com/venuchitta/ghz?style=flat-square"} alt={"Go Report Card"} />
           </a>
-          <a href={"https://raw.githubusercontent.com/bojand/ghz/master/LICENSE"} style={{ margin: '5px' }}>
-            <img src={"https://img.shields.io/github/license/bojand/ghz.svg?style=flat-square"} alt={"License"} />
+          <a href={"https://raw.githubusercontent.com/venuchitta/ghz/master/LICENSE"} style={{ margin: '5px' }}>
+            <img src={"https://img.shields.io/github/license/venuchitta/ghz.svg?style=flat-square"} alt={"License"} />
           </a>
           <a href={"https://www.paypal.me/bojandj"}>
             <img src={"https://img.shields.io/badge/Donate-PayPal-green.svg?style=flat-square"} alt={"Donate"} />

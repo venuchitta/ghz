@@ -12,8 +12,8 @@ import (
 	"github.com/labstack/echo"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/bojand/ghz/web/database"
-	"github.com/bojand/ghz/web/model"
+	"github.com/venuchitta/ghz/web/database"
+	"github.com/venuchitta/ghz/web/model"
 )
 
 const dbName = "../test/api_test.db"

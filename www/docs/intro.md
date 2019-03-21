@@ -3,10 +3,10 @@ id: intro
 title: Introduction
 ---
 
-[![Release](https://img.shields.io/github/release/bojand/ghz.svg?style=flat-square)](https://github.com/bojand/ghz/releases/latest) 
-[![Build Status](https://img.shields.io/circleci/project/github/bojand/ghz/master.svg?style=flat-square)](https://circleci.com/gh/bojand/ghz)
-[![Go Report Card](https://goreportcard.com/badge/github.com/bojand/ghz?style=flat-square)](https://goreportcard.com/report/github.com/bojand/ghz)
-[![License](https://img.shields.io/github/license/bojand/ghz.svg?style=flat-square)](https://raw.githubusercontent.com/bojand/ghz/master/LICENSE)
+[![Release](https://img.shields.io/github/release/venuchitta/ghz.svg?style=flat-square)](https://github.com/venuchitta/ghz/releases/latest) 
+[![Build Status](https://img.shields.io/circleci/project/github/venuchitta/ghz/master.svg?style=flat-square)](https://circleci.com/gh/venuchitta/ghz)
+[![Go Report Card](https://goreportcard.com/badge/github.com/venuchitta/ghz?style=flat-square)](https://goreportcard.com/report/github.com/venuchitta/ghz)
+[![License](https://img.shields.io/github/license/venuchitta/ghz.svg?style=flat-square)](https://raw.githubusercontent.com/venuchitta/ghz/master/LICENSE)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg?style=flat-square)](https://www.paypal.me/bojandj)
 [![Buy me a coffee](https://img.shields.io/badge/buy%20me-a%20coffee-orange.svg?style=flat-square)](https://www.buymeacoffee.com/bojand)
 
