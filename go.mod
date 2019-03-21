@@ -1,8 +1,9 @@
-module github.com/bojand/ghz
+module github.com/venuchitta/ghz
 
 require (
 	github.com/BurntSushi/toml v0.3.1 // indirect
 	github.com/alecthomas/template v0.0.0-20160405071501-a0175ee3bccc
+	github.com/bojand/ghz v0.31.0
 	github.com/bojand/hri v1.1.0
 	github.com/denisenkom/go-mssqldb v0.0.0-20190121005146-b04fd42d9952 // indirect
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible // indirect
@@ -42,3 +43,5 @@ require (
 	gopkg.in/yaml.v2 v2.2.2 // indirect
 	honnef.co/go/tools v0.0.0-20190128043916-71123fcbb8fe
 )
+
+replace github.com/bojand/ghz => ./
