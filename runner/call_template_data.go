@@ -4,6 +4,7 @@ import (
 	"bytes"
 	b64 "encoding/base64"
 	"encoding/json"
+	"strconv"
 	"text/template"
 	"time"
 
@@ -31,7 +32,7 @@ func newCallTemplateData(mtd *desc.MethodDescriptor, reqNum int64) *callTemplate
 
 	return &callTemplateData{
 		RequestNumber:       reqNum,
-		RequestNumberBase64: b64.StdEncoding.EncodeToString([]byte(RequestNumber)),
+		RequestNumberBase64: b64.StdEncoding.EncodeToString([]byte(strconv.FormatInt(reqNum, 10))),
 		FullyQualifiedName:  mtd.GetFullyQualifiedName(),
 		MethodName:          mtd.GetName(),
 		ServiceName:         mtd.GetService().GetName(),
